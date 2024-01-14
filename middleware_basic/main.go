@@ -10,6 +10,7 @@ import (
 // Um middleware simplesmente pega um http.HandlerFunc como um dos seus parâmetros, engloba ele e retorna um novo
 // http.HandlerFunc para o servidor chamar.
 
+// loggin é um middleware que faz um wrap com o HandlerFunc recebido por parâmetro e retorna um novo
 func loggin(f http.HandlerFunc) http.HandlerFunc {
 	return func(writer http.ResponseWriter, request *http.Request) {
 		log.Println(request.URL.Path)
