@@ -1,0 +1,14 @@
+{{if .Success}}
+  <h1>Obrigado pela sua mensagem!</h1>
+{{else}}
+  <h1>Contato</h1>
+  <form method="POST">
+    <label>Email:</label><br />
+    <input type="text" name="email"><br />
+    <label>Assunto:</label><br />
+    <input type="text" name="assunto"><br />
+    <label>Mensagem:</label><br />
+    <textarea name="message"></textarea><br />
+    <input type="submit">
+  </form>
+{{end}}
